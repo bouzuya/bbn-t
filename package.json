@@ -1,0 +1,37 @@
+{
+  "name": "bbn-t",
+  "description": "bbn-t",
+  "version": "1.0.0",
+  "author": {
+    "name": "bouzuya",
+    "email": "m@bouzuya.net",
+    "url": "http://bouzuya.net"
+  },
+  "bin": {
+    "bbn-t": "./bin/bbn-t"
+  },
+  "bugs": {
+    "url": "https://github.com/bouzuya/bbn-t/issues"
+  },
+  "dependencies": {
+    "es6-promise": "^3.0.2",
+    "twitter": "^1.2.5"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.10.0"
+  },
+  "homepage": "https://github.com/bouzuya/bbn-t#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bouzuya/bbn-t"
+  },
+  "scripts": {
+    "build": "coffee -c -o lib/ src/",
+    "clean": "rm -rf lib/",
+    "preinstall": "npm run clean && npm run build",
+    "start": "npm run clean && npm run build && node index.js"
+  }
+}
